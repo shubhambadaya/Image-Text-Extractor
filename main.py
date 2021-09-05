@@ -5,7 +5,7 @@ import os
 from google.cloud import pubsub_v1
 from google.cloud import storage
 from google.cloud import translate_v2 as translate
-from google.cloud import vision
+from google.cloud import vision_v1
 
 vision_client = vision.ImageAnnotatorClient()
 translate_client = translate.Client()
