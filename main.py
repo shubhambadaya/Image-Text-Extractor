@@ -6,6 +6,20 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/home/jupyter/image-classificati
 
 from google.cloud import vision_v1
 
+
+# [START message_validatation_helper]
+def validate_message(message, param):
+    var = message.get(param)
+    if not var:
+        raise ValueError(
+            "{} is not provided. Make sure you have \
+                          property {} in the request".format(
+                param, param
+            )
+        )
+    return var
+
+
 # [START functions_ocr_process]
 def process_image(file, context):
     """Cloud Function triggered by Cloud Storage when a file is changed.
@@ -22,6 +36,11 @@ def process_image(file, context):
     detect_text(bucket, name)
 
     print("File {} processed.".format(file["name"]))
+
+    
+
+
+
 
 
 def detect_text(bucket,filename):
