@@ -24,7 +24,7 @@ def process_image(file, context):
     print("File {} processed.".format(file["name"]))
 
 
-def sample_batch_annotate_files(bucket,filename):
+def detect_text(bucket,filename):
 
     text = ""
     """Perform batch file annotation."""
