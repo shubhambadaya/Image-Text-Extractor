@@ -2,15 +2,15 @@ import base64
 import json
 import os
 
-from google.cloud import pubsub_v1
+#from google.cloud import pubsub_v1
 from google.cloud import storage
-from google.cloud import translate_v2 as translate
+#from google.cloud import translate_v2 as translate
 from google.cloud import vision_v1
 
-vision_client = vision.ImageAnnotatorClient()
-translate_client = translate.Client()
-publisher = pubsub_v1.PublisherClient()
-storage_client = storage.Client()
+#vision_client = vision.ImageAnnotatorClient()
+#translate_client = translate.Client()
+#publisher = pubsub_v1.PublisherClient()
+#storage_client = storage.Client()
 
 project_id = os.environ["GCP_PROJECT"]
 
