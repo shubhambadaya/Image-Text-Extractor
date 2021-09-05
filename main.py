@@ -2,9 +2,17 @@ import base64
 import json
 import os
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/home/jupyter/image-classification-mlops-e48685e1fcab.json"
+from google.cloud import pubsub_v1
+from google.cloud import storage
+from google.cloud import translate_v2 as translate
+from google.cloud import vision
 
-from google.cloud import vision_v1
+vision_client = vision.ImageAnnotatorClient()
+translate_client = translate.Client()
+publisher = pubsub_v1.PublisherClient()
+storage_client = storage.Client()
+
+project_id = os.environ["GCP_PROJECT"]
 
 
 # [START message_validatation_helper]
