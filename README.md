@@ -1,4 +1,4 @@
-# Text detection from images
+# Text extraction from images
 
 Using Google Cloud Platform vision api streamlit app has been developed. The App is being deployed on cloud run.
 
